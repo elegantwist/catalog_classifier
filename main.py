@@ -283,6 +283,7 @@ def get_cleaned_data(validation, master_catalog_dt):
         mask_val = np.random.rand(len(catalog_dt)) < 0.95
 
         train_dt = catalog_dt.loc[mask_val].reset_index(drop=True)
+
         validation_dt = catalog_dt.loc[~mask_val].reset_index(drop=True)
 
         return train_dt, validation_dt
